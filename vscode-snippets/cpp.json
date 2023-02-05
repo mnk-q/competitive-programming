@@ -12,22 +12,48 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Initial template": {
+	"init": {
 		"prefix": "init",
 		"body": [
-		  "#include <bits/stdc++.h>",
-		  "#define ll long long int",
-		  "#define pb push_back",
-		  "#define mk(a,b) make_pair(a,b)",
-		  "#define vi vector<int>",
-		  "#define vll vector<long long int>",
-		  "#define all(a) (a).begin(), (a).end()",
-		  "#define ifill(v) for(int &x: v) cin>>x",
-		  "#define lfill(v) for(long long int &x: v) cin>>x",
-		  "#define endl \"\\n\"",
-		  "#define md 1000000007",
-		  "",
+		  "#include \"bits/stdc++.h\"",
 		  "using namespace std;",
+		  "using ll = long long;",
+		  "using vi = vector<int>;",
+		  "using vvi = vector<vi>;",
+		  "using vll = vector<ll>;",
+		  "using vvll = vector<vll>;",
+		  "using vb = vector<bool>;",
+		  "using vvb = vector<vb>;",
+		  "using vd = vector<double>;",
+		  "using vs = vector<string>;",
+		  " ",
+		  "using pii = pair<int, int>;",
+		  "using pll = pair<ll, ll>;",
+		  "using pdd = pair<double, double>;",
+		  " ",
+		  "using vpii = vector<pii>;",
+		  "using vpll = vector<pll>;",
+		  "using vpdd = vector<pdd>;",
+		  "#define all(a) (a).begin(), (a).end()",
+		  "template<typename T> void in(T & a){for(auto &x:a) cin >> x;}",
+		  "template<typename T> void out(T a){for(auto x: a){cout << x << \" \" ;}cout << \"\\n\";}",
+		  "#define endl \"\\n\"",
+		  "const int md = 1000000007;",
+		  "const int INF = 1e9+1;",
+		  "const int SIZE = 1500001;",
+		  "template<typename... Args>",
+		  "void readln(Args&... args)",
+		  "{",
+		  "\t((cin >> args), ...);",
+		  "}",
+		  " ",
+		  
+		  "template<typename... Args>",
+		  "void writeln(Args... args)",
+		  "{",
+		  "    ((cout << args << \" \"), ...);",
+		  "}",
+		  "",
 		  "int main()",
 		  "{",
 		  "    ios_base::sync_with_stdio(false);",
@@ -36,18 +62,24 @@
 		  "    return 0;",
 		  "}"
 		],
-		"description": "Initial template"
+		"description": "init"
 	  },
-	  "Testcase": {
+	  "Testcases" : {
 		"prefix": "testcase",
 		"body": [
 		  "int t;",
-		  "cin>>t;",
+		  "cin >> t;",
 		  "while(t--){",
-		  "\t$0",
-		  "\tif(t) cout<<\"\\n\";",
-		  "}"
-		],
-		"description": "Testcase"
-	  }
+		  "    $0",
+		  "}",
+		]
+	  },
+	  "USACO FILE IO" : {
+		"prefix": "fileio",
+		"body": [
+		  "freopen(\"${1:file}.in\", \"r\", stdin);",
+		  "freopen(\"${1:file}.out\", \"w\", stdout);",
+		]
+	  },
+	  
 }

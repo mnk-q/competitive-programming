@@ -141,84 +141,15 @@
 		],
 		"description": "Fast IO"
 	},
-	"Imports" :{
+	"Basic Init" :{
 		"prefix": "init",
 		"body": [
-			"from collections import Counter, defaultdict, deque",
-			"from math import ceil,floor,sqrt,log2",
-			"md=1000000007",
-			"md2=998244353",
-			"mx=1000000000",
-			"mx2=1e18",
+			"from collections import defaultdict",
+			"from sys import stdin, stdout",
+			"input = lambda : stdin.readline().rstrip()",
+			"print = lambda *a, **kw : stdout.write(\" \".join(str(x) for x in a))",
 			"\n$0"
 		],
-		"description": "Initial Imports and Declarations"
-	},
-	"Binary Search": {
-		"prefix": "binarysearch",
-		"body": [
-		  "def binary_search(arr, key):",
-		  "    k=0",
-		  "    n=len(arr)",
-		  "    b=n//2",
-		  "    while b>=1:",
-		  "        while (k+b)< n and arr[k+b]<=key:",
-		  "            k+=b ",
-		  "        b=b>>1",
-		  "    if arr[k]==key:",
-		  "        return k",
-		  "    return -1"
-		],
-		"description": "Binary Search"
-	  },
-	  "Floor Value": {
-		"prefix": "getfloor",
-		"body": [
-		  "def getFloor(nums, x, index=False):",
-		  " ",
-		  "    (left, right) = (0, len(nums) - 1)",
-		  "    floor = -1",
-		  "    floorIndex=-1",
-		  "    while left <= right:",
-		  "        mid = (left + right) // 2",
-		  "        if nums[mid] == x:",
-		  "            return nums[mid]",
-		  "        elif x < nums[mid]:",
-		  "            right = mid - 1",
-		  "        else:",
-		  "            floor = nums[mid]",
-		  "            floorIndex = mid",
-		  "            left = mid + 1",
-		  "    if index:",
-		  "        return floorIndex",
-		  "    return floor",
-		  ""
-		],
-		"description": "Floor Value"
-	  },
-	  "Ceil Value": {
-		"prefix": "getceil",
-		"body": [
-		  "def getCeil(nums, x, index=False):",
-		  "    (left, right) = (0, len(nums) - 1)",
-		  "    ceil = -1",
-		  "    ceilIndex = -1",
-		  "    while left <= right:",
-		  "        mid = (left + right) // 2",
-		  "        if nums[mid] == x:",
-		  "            return nums[mid]",
-		  "        elif x < nums[mid]:",
-		  "            ceil = nums[mid]",
-		  "            ceilIndex = mid",
-		  "            right = mid - 1",
-		  "        else:",
-		  "            left = mid + 1",
-		  "    if index:",
-		  "        return ceilIndex",
-		  "    return ceil"
-		],
-		"description": "Ceil Value"
-	  },
-	  
-
+		"description": "Basic Template. Still don't know how overloading print speeds up the execution"
+	}
  }
